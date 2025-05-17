@@ -106,39 +106,40 @@ export default function Form({
       </div>
 
       {/* 4-tags */}
-      <div>
-        {/* 1-python */}
-        <div className="form-check">
-          <input
-            className="form-check-input"
-            type="checkbox"
-            value="python"
-            id="python"
-            name="tags"
-            checked={employee.tags?.includes("python") || false}
-            onChange={handleChange}
-          />
-          <label className="form-check-label" htmlFor="python">
-            Python
-          </label>
-        </div>
+      <div className="mb-3">
+  <h5 className="mb-2">Select Tags</h5>
 
-        {/* 2-js */}
-        <div className="form-check">
-          <input
-            className="form-check-input"
-            type="checkbox"
-            value="javascript"
-            id="javascript"
-            onChange={handleChange}
-            checked={employee.tags?.includes("javascript") || false}
-            name="tags"
-          />
-          <label className="form-check-label" htmlFor="javascript">
-            Javascript
-          </label>
-        </div>
-      </div>
+  <div className="form-check form-check-inline">
+    <input
+      className="form-check-input"
+      type="checkbox"
+      value="python"
+      id="python"
+      name="tags"
+      checked={employee.tags?.includes("python") || false}
+      onChange={handleChange}
+    />
+    <label className="form-check-label" htmlFor="python">
+      Python
+    </label>
+  </div>
+
+  <div className="form-check form-check-inline">
+    <input
+      className="form-check-input"
+      type="checkbox"
+      value="javascript"
+      id="javascript"
+      name="tags"
+      checked={employee.tags?.includes("javascript") || false}
+      onChange={handleChange}
+    />
+    <label className="form-check-label" htmlFor="javascript">
+      JavaScript
+    </label>
+  </div>
+</div>
+
 
       <button type="submit" className="btn btn-primary mt-3 w-100">
         {editingEmp ? "Update Employee" : "Add Employee"}
