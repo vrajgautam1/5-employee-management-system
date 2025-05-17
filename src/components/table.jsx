@@ -19,7 +19,9 @@ export default function Table({ employeesList, setEmployessList, editingEmp, set
     }
 
     return (
-        <table className="table">
+
+        <div className="mb-5">
+            <table className="table table-striped table-hover table-bordered">
             <thead>
                 <tr>
                     <th scope="col">#</th>
@@ -43,7 +45,7 @@ export default function Table({ employeesList, setEmployessList, editingEmp, set
                                     {
                                         emp.tags ? emp.tags.map((t, ind)=>{
                                             return(
-                                                <li key={ind}>{t}</li>
+                                                <li key={ind}><span className="badge bg-info text-dark me-1" key={ind}>{t}</span></li>
                                             )
                                         }) : null
                                     }
@@ -59,5 +61,7 @@ export default function Table({ employeesList, setEmployessList, editingEmp, set
                 })}
             </tbody>
         </table>
+        </div>
+        
     );
 }

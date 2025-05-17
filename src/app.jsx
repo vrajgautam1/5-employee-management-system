@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Table from "./components/table";
 import Form from "./components/form";
+import './app.css';
 
 function App() {
 
@@ -26,6 +27,7 @@ function App() {
 
     return (
         <div className="container mt-5">
+             <h2 className="text-center mb-4">Employee Management</h2>
             <Form employeesList={employeesList} setEmployessList={setEmployessList} editingEmp={editingEmp} setEditingEmp={setEditingEmp}/>
             <Table employeesList={employeesList} setEmployessList={setEmployessList} editingEmp={editingEmp} setEditingEmp={setEditingEmp}/>
         </div>
